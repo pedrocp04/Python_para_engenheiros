@@ -1,10 +1,13 @@
-x = int(input('Digite um número: '))
+entrada = input('Digite um número: ')
 
-if type(x) is str:
-    print('Não é número')
-elif x > 0:
-    print('Número positivo')
-elif x < 0:
-    print('Número negativo')
-elif x == 0:
-    print('zero')
+try:
+    x = int(entrada)
+    if x > 0:
+        print('Número positivo')
+    elif x < 0:
+        print('Número negativo')
+    else:
+        print('Zero')
+except ValueError:
+    print('Não é um número inteiro')
+
