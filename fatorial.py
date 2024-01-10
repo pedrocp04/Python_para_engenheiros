@@ -1,10 +1,14 @@
-n = int(input('Digite um número: '))
+f = input("Digite um número: ")
 
-fat = 1
+try:
+    f = int(f)
+    fat = 1
 
-if type(n) is int:
-    while n> 0:
-        fat *= n
-        n -= 1
+    while f > 0:
+        fat *= f
+        f -= 1
 
-fat
+    print("O fatorial é:", fat)
+
+except ValueError:
+    print('Não é um número!')
